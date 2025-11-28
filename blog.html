@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>ICOMP | Blog</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="icomplogo.jpeg" type="image/x-icon">
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+        <header>
+        <a href="index.html" class="brand">
+            <img src="icomplogo.jpeg" alt="ICOMP" class="logo">
+        </a>
+            <nav class="navegacion-nav">
+                <a href="index.html" class="vin">Inicio</a>
+                <a href="nosotros.html"class="vin">Nosotros</a>
+                <a href="servicios.html"class="vin">Servicios</a>
+                <a href="contacto.html" class="vin">Contáctanos</a>
+                <a href="blog.html" class="vin">Blog</a>
+            </nav>
+    </header>
+       <main >
+    <div class="layout">
+        <section class="card">
+            <h2>Nuevo post</h2>
+            <p class="descripcion-form">
+                Sube una imagen, escribe un título y un texto. La publicación se guardará en este navegador.
+            </p>
+            <form id="blogForm">
+                <label for="imagen">Imagen (opcional)</label>
+                <input type="file" id="imagen" accept="image/*">
+
+                <div class="preview" id="imagePreview" style="display:none;">
+                    <p>Vista previa:</p>
+                    <img id="previewImg" alt="Vista previa de la imagen">
+                </div>
+
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" placeholder="Ej. Nuevo servicio de mantenimiento" required>
+
+                <label for="texto">Contenido</label>
+                <textarea id="texto" placeholder="Escribe aquí la descripción o contenido del post..." required></textarea>
+
+                <button type="submit" class="btn">Publicar</button>
+            </form>
+        </section>
+        <section class="card" style="margin-top:18px">
+            <div class="posts-header">
+                <h2>Publicaciones</h2>
+                <p id="postsCount">0 publicaciones</p>
+            </div>
+            <div id="postsContainer">
+                <p class="posts-empty">Aún no hay publicaciones. Crea la primera usando el formulario.</p>
+            </div>
+            <div class="actions" id="clearActions" style="display:none;">
+                <button class="btn btn-secondary" id="clearPostsBtn">Borrar todas las publicaciones</button>
+            </div>
+        </section>
+    </div>
+</main>
+ <footer class="footer">
+        <div class="footer__container container">
+
+            <div class="footer__contact">
+                <div class="footer__texts">
+                    <h2 class="title">Contacto</h2>
+                    <p class="footer__copy">Si tienes alguna duda puedes contactarnos por nuestros medios de comunicación</p>
+
+                     <div class="footer__social">
+                            <div class="icon whatsapp">
+                            <div class="tooltip">Whatsapp</div>
+                            <span><i class="fa-brands fa-whatsapp"></i></span>
+                            </div>
+                                <div class="icon facebook">
+                                <div class="tooltip">Facebook</div>
+                                <span><i class="fa-brands fa-facebook-f"></i></span>
+                                </div>
+                            <div class="icon instagram">
+                            <div class="tooltip">Instagram</div>
+                            <span><i class="fa-brands fa-instagram"></i></span>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <p class="footer__copyright">
+                &copy; 2025 ICOMP — Todos los derechos reservados &copy; 
+            </p>
+        </div>
+    </footer>
+
+<!-- Modal para ver imágenes ampliadas -->
+<div id="modalImagen" class="modal">
+    <span class="cerrar">&times;</span>
+    <img class="modal-contenido" id="imgAmpliada">
+</div>
+<div id="privacy-banner" class="privacy-banner hidden">
+  <div class="pb-content">
+    <p>
+      Utilizamos cookies y datos para mejorar tu experiencia.
+      Consulta nuestro 
+      <a href="aviso.html" target="_blank">Aviso de Privacidad</a>.
+    </p>
+    <button id="pb-accept">Aceptar</button>
+  </div>
+</div>
+
+<!-- Lógica con JavaScript -->
+<script src="script.js"></script>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
